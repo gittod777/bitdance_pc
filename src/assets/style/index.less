@@ -1,0 +1,87 @@
+
+.fadeTop {
+  animation: pngFadeTop .6s linear 1;
+}
+.fadeBottom {
+  animation: pngFadeBottom .6s linear 1;
+}
+.fadeLaterBottom {
+  animation: pngFadeBottom .6s linear 1;
+  animation-delay: .6s;
+  animation-fill-mode: forwards;
+}
+.fadeIn {
+  animation: pngFadeIn .6s linear 1;
+  animation-delay: .6s;
+  animation-fill-mode: forwards;
+}
+.beat-scale {
+  animation: scale 3.4s linear infinite;
+}
+.beat-scale-one {
+  animation: scale-one 3.4s linear infinite;
+}
+.process-path{
+  stroke-dasharray: 1rem, 1.01rem;
+  stroke-dashoffset: 1rem;
+  animation: move 4s linear 1;
+  animation-fill-mode: forwards;
+}
+@keyframes move {
+  0%{
+    stroke-dashoffset: 1rem;
+  }
+  100%{
+      stroke-dashoffset: 0;
+  }
+}
+@keyframes pngFadeTop {
+  0% {
+    opacity: 0;
+    transform: translate(0, -24px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+@keyframes pngFadeBottom {
+  0% {
+    opacity: 0;
+    transform: translate(0, 24px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+@keyframes pngFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes scale {
+  25%{
+    transform: translate(0, 10px);
+  }
+  50%{
+      transform: translate(0, 0px);
+  }
+  75%{
+      transform: translate(0, 10px);
+  }
+}
+@keyframes scale-one {
+  25%{
+    transform: translate(10px, 0);
+  }
+  50%{
+      transform: translate(0, 0px);
+  }
+  75%{
+      transform: translate(10px, 0);
+  }
+}
